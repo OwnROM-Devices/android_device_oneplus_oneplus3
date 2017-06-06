@@ -158,13 +158,8 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
 	OnePlusCamera \
-	OnePlusCameraService
-
-# Connectivity Engine support (CNE)
-PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne \
-    services-ext
+	OnePlusCameraService \
+    libcamera_shim
 
 # Display
 PRODUCT_PACKAGES += \
