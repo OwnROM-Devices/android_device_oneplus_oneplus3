@@ -72,8 +72,8 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/oneplus/msm8996
-TARGET_KERNEL_CONFIG := lineageos_oneplus3_defconfig
+TARGET_KERNEL_SOURCE := OwnKernel/oneplus3/msm8996
+TARGET_KERNEL_CONFIG := ownkernel_oneplus3_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
