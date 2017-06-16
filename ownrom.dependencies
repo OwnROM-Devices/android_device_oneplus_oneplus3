@@ -42,15 +42,9 @@
     "revision": "cm-14.1"
   },
   {
-    "repository": "EAS-Project/android_device_voxpopuli",
-    "target_path": "device/voxpopuli",
-    "remote": "github",
-    "revision": "msm8996"
-  },
-  {
-    "repository": "OwnROM-Devices/proprietary_vendor_oneplus",
+    "repository": "TheMuppets/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
     "remote": "github",
-    "revision": "own-n"
+    "revision": "cm-14.1"
   }
 ]
