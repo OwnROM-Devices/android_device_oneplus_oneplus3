@@ -152,6 +152,9 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 #TARGET_USES_HWC2 := true
 
+# EAS
+ENABLE_SCHEDBOOST := true
+
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
@@ -193,6 +196,10 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3154116608
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 57436708864
 BOARD_FLASH_BLOCK_SIZE := 262144
 
+# Power HAL
+TARGET_POWERHAL_VARIANT := voxpopuli
+TARGET_USES_INTERACTION_BOOST := true
+
 # RIL
 TARGET_RIL_VARIANT := caf
 
@@ -204,6 +211,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+-include device/voxpopuli/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
@@ -228,10 +236,3 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus3/BoardConfigVendor.mk
-
-# EAS support
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
-TARGET_POWERHAL_VARIANT := voxpopuli
-TARGET_USES_INTERACTION_BOOST := true
--include device/voxpopuli/sepolicy/sepolicy.mk
